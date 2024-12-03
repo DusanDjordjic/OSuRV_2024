@@ -1,0 +1,21 @@
+<launch>
+    <!-- Argument to specify the joystick device (optional, defaults to /dev/input/js0) -->
+    <arg name="joy_dev" default="/dev/input/js0"/>
+
+    <!-- Start the joy_node from the joy package -->
+    <node
+        name="joy_drv"
+        pkg="joy"
+        type="joy_node"
+        clear_params="true"
+        output="screen"
+        respawn="true"
+    >
+        <!-- Remap the 'joy' topic to '/raw_joy' -->
+        <param name="joy_dev" value="$(arg joy_dev)"/>
+        <param name="deadzone" value="0.12"/>
+        <param name="autorepeat_rate" value="25"/>
+        <remap from="joy" to="/raw_joy"/>
+    </node>
+</launch>
+

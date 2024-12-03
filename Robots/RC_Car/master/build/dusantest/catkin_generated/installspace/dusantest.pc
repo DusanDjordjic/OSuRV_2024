@@ -1,0 +1,8 @@
+prefix=/home/dusan/Documents/osurv/projekat/master/install
+
+Name: dusantest
+Description: Description of dusantest
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

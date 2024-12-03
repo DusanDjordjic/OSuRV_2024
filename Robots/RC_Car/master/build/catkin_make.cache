@@ -1,0 +1,2 @@
+dusantest
+-DCATKIN_DEVEL_PREFIX=/home/dusan/Documents/osurv/projekat/master/devel -DCMAKE_INSTALL_PREFIX=/home/dusan/Documents/osurv/projekat/master/install -G Unix Makefiles
