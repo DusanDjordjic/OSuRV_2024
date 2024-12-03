@@ -1,0 +1,2 @@
+joy_reader
+-DCATKIN_DEVEL_PREFIX=/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/devel -DCMAKE_INSTALL_PREFIX=/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install -G Unix Makefiles

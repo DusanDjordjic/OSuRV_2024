@@ -1,0 +1,8 @@
+prefix=/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install
+
+Name: joy_reader
+Description: Description of joy_reader
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
