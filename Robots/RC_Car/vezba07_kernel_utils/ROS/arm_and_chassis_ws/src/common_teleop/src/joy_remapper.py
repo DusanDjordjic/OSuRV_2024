@@ -26,24 +26,6 @@ class JoyRemapper:
 		#rospy.logdebug('JOY_REMAPPER debug')
 		# Get joy type.
 		self.joy_type = JoyType.DEFAULT
-		joy_dev = rospy.get_param('~joy_dev', None)
-		if joy_dev:
-			#rospy.logdebug('joy_dev = {}'.format(joy_dev))
-			with open(joy_dev, 'rb') as f:
-				# Get the device name.
-				buf = array.array('B', [0] * 64)
-				def JSIOCGNAME(len):
-					return 0x80006a13 + (0x10000 * len)
-				if ioctl(f, JSIOCGNAME(len(buf)), buf) < 0:
-					js_name = "Unknown"
-				else:
-					js_name = buf.tobytes().rstrip(b'\x00').decode('utf-8')
-				rospy.loginfo('Device name = {}'.format(js_name))
-				if js_name == 'Microsoft X-Box 360 pad':
-					self.joy_type = JoyType.XBOX
-				elif js_name == 'ShanWan PS3/PC Wired GamePad':
-					self.joy_type = JoyType.REDRAGON
-					#self.joy_type = JoyType.DEFAULT
 		rospy.loginfo('self.joy_type = {}'.format(self.joy_type))
 
 		self.joy_src_sub = rospy.Subscriber("joy_src", Joy, self.on_joy)
