@@ -35,7 +35,8 @@ int bldc__init(void) {
 	
 	for(ch = 0; ch < BLDC__N_CH; ch++){
 		//TODO Init direction pin
-		
+        gpio__steer_pinmux(bldc[ch].dir_gpio_no, GPIO__OUT);		
+        bldc__set_dir(ch, CW);
 		//TODO Init timer
 		
 		//TODO Init IRQ
@@ -47,6 +48,10 @@ int bldc__init(void) {
 
 void bldc__exit(void) {
 	//TODO gpio_free() IRQ pin
+    bldc__ch_t ch;
+    for (ch = 0; ch < BLDC__N_CH; ch++) {
+        gpio_free(bldc[ch].pg_gpio_no);
+    }
 }
 
 
@@ -55,6 +60,12 @@ void bldc__set_dir(bldc__ch_t ch, dir_t dir) {
 		return;
 	}
 	// TODO Save and set direction @ GPIO17, pin 11
+    bldc[ch].dir = dir;
+    if (dir == CW) {
+        gpio__set(bldc[ch].dir_gpio_no);
+    } else {
+        gpio__clear(bldc[ch].dir_gpio_no);
+    }
 }
 
 void bldc__set_duty(bldc__ch_t ch, u16 duty_permille) {
