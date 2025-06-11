@@ -1,5 +1,6 @@
 # Pokretanje roscore listener and talker nodes
 
+https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
 
 rosrun rospy_tutorials talker - start talker node
 
