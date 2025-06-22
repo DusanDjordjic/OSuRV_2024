@@ -2,9 +2,9 @@
 
 Remote kontrolu postizemo tako sto pokrecemo jedan **master** ros node na jendoj masini, a drugi ros node na raspberypi-u.
 Master masina ce da da pokrece i joy node koji cita podatke koje joypad salje i njih proslednjuje dalje.
-Pored joy node-a imamo i joy_remapper node koji podatke koje joy node salje remapira i salje ih dalje na TODO topic.
+Pored joy node-a imamo i joy_remapper node koji podatke koje joy node salje remapira i salje ih dalje na /joy_dst topic.
 
-Na RaspberryPi-u smo pokrenuli ros node koji slusa na TODO topicu i dalje sa tim porukama nesto radi (nije nam bitan dalji deo za projekat).
+Na RaspberryPi-u smo pokrenuli ros node koji slusa na /joy_dst topicu i dalje sa tim porukama nesto radi (nije nam bitan dalji deo za projekat).
 
 ## Kako smo napravili projekat
 
