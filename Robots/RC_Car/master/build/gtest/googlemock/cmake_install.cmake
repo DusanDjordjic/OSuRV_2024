@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dusan/Documents/osurv/projekat/master/install")
+  set(CMAKE_INSTALL_PREFIX "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dusan/Documents/osurv/projekat/master/build/gtest/googletest/cmake_install.cmake")
+  include("/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/gtest/googletest/cmake_install.cmake")
 
 endif()
 

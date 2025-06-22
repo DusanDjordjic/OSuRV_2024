@@ -62,6 +62,4 @@
 		<remap from="event_hold" to="/common/event_hold"/>
 		<remap from="event_merged" to="/common/event_merged"/>
 	</node>
-
-
 </launch>

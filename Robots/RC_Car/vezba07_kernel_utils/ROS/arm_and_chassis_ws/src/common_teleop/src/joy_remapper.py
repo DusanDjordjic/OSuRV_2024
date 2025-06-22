@@ -36,8 +36,6 @@ class JoyRemapper:
 			queue_size = 1
 		)
 
-
-
 	def on_joy(self, ij):
 		if self.joy_type == JoyType.DEFAULT:
 			self.joy_dst_pub.publish(ij)

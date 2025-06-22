@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dusan/Documents/osurv/projekat/master/src
+CMAKE_SOURCE_DIR = /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dusan/Documents/osurv/projekat/master/build
+CMAKE_BINARY_DIR = /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/dusan/Documents/osurv/projekat/master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dusan/Documents/osurv/projekat/master/src /home/dusan/Documents/osurv/projekat/master/src /home/dusan/Documents/osurv/projekat/master/build /home/dusan/Documents/osurv/projekat/master/build /home/dusan/Documents/osurv/projekat/master/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/src /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/src /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

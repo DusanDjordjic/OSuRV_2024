@@ -1,8 +1,8 @@
-# Install script for directory: /home/dusan/Documents/osurv/projekat/master/src
+# Install script for directory: /home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dusan/Documents/osurv/projekat/master/install")
+  set(CMAKE_INSTALL_PREFIX "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,89 +49,104 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/_setup_util.py")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE PROGRAM FILES "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE PROGRAM FILES "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/env.sh")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE PROGRAM FILES "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE PROGRAM FILES "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/setup.bash;/home/dusan/Documents/osurv/projekat/master/install/local_setup.bash")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/setup.bash;/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE FILE FILES
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/setup.bash"
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE FILE FILES
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/setup.bash"
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/setup.sh;/home/dusan/Documents/osurv/projekat/master/install/local_setup.sh")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/setup.sh;/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE FILE FILES
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/setup.sh"
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE FILE FILES
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/setup.sh"
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/setup.zsh;/home/dusan/Documents/osurv/projekat/master/install/local_setup.zsh")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/setup.zsh;/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE FILE FILES
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/setup.zsh"
-    "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE FILE FILES
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/setup.zsh"
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/dusan/Documents/osurv/projekat/master/install/.rosinstall")
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/setup.fish;/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/local_setup.fish")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/dusan/Documents/osurv/projekat/master/install" TYPE FILE FILES "/home/dusan/Documents/osurv/projekat/master/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE FILE FILES
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/setup.fish"
+    "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/local_setup.fish"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install/.rosinstall")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/install" TYPE FILE FILES "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dusan/Documents/osurv/projekat/master/build/gtest/cmake_install.cmake")
-  include("/home/dusan/Documents/osurv/projekat/master/build/dusantest/cmake_install.cmake")
+  include("/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/gtest/cmake_install.cmake")
+  include("/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/joy_reader/cmake_install.cmake")
 
 endif()
 
@@ -143,5 +158,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dusan/Documents/osurv/projekat/master/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dusan/Documents/projects/OSuRV_2024/Robots/RC_Car/master/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
