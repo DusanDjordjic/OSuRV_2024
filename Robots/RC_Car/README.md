@@ -23,7 +23,7 @@ Na RaspberryPi-u smo pokrenuli ros node koji slusa na /joy_dst topicu i dalje sa
 
 ## Kako pokrenuti projekat
 
-### Master node
+### Master node (PC)
 
 Na jednom racunaru pokrenemo ros master node komandom `roscore` tu cemo dobiti ROS_MASTER_URI=http://<nas-hostname>:11311/.
 
@@ -49,7 +49,7 @@ Kada smo pronasli nas joypad pokrecemo `joy_reader` node sledecom komandom `rosl
 
 Proverimo da li sve radi sa `rostopic echo /joy` i stiskamo dugmice na joypadu, trebalo bi da vidimo promene u konzoli. Sa ovim smo uspesno pokrenuli master node i joy_reader package.
 
-### Slave node
+### Slave node (RPI)
 
 Slave node je sve ostalo sto treba da radi na raspberrypi-u. Potrebno je da ceo folder `vezba07_kernel_utils` prebacimo na raspberrypi. Pre nego sto bilo sta uradimo treba da postavimo ROS_MASTER_URI env na ROS_MASTER_URI koji smo dobili kao output `roscore` komande. Pazimo samo da ip bude dobar tj. ip treba da bude od racunara na kome smo pokrenuli `roscore`. Takodje setujemo ROS_HOSTNAME na nas ip (ip od raspberrypi-a). To sve radimo na sledeci nacin:
 
@@ -61,3 +61,9 @@ export ROS_HOSTNAME=<rpi-ip>
 Nakon svega toga pokrecemo program na raspberrypi-u sa `./tmuxer.py` (`vezba07_kernel_utils/ROS/arm_and_chassis_ws/tmuxer.py` je lokacija) kao sto smo i do sada uvek radili.
 
 Nakon svega ovoga imamo dve masine, na jednoj (desktop) je master node i joy_reader koji cita podatke od joypada, mapira ih i salje ih na /joy_dst topic, a na drugoj (rpi) je arm_and_chassis_ws koji prima podatke na /joy_dst topic-a i kontrolise ruku ili auto.
+
+## TODO
+
+hostname -I => ROS_HOSTNAME env
+
+tmuxer.cfg.py dodaj MASTER_URI u settings

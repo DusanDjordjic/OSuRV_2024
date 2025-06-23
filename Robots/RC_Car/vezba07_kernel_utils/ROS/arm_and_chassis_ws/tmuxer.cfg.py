@@ -3,7 +3,12 @@ if not 'SIM' in globals():
 	SIM = False
 if not 'ARM' in globals():
 	ARM = 's3a'
+if not 'REMOTE' in globals():
+	REMOTE = False
 
+print("=============================")
+print(globals())
+print("=============================")
 import subprocess
 def run_for_stdout(str_cmd):
 	r = subprocess.run(str_cmd.split(), stdout = subprocess.PIPE)
@@ -18,10 +23,9 @@ if not on_rpi:
 _settings = {
 	'SIM': SIM,
 	'ARM': ARM,
+	'REMOTE': REMOTE,
 	'arm_main': arm_main,
 }
-
-
 
 _layout = [
 	{

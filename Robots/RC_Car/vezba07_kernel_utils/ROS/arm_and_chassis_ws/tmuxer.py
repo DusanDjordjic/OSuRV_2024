@@ -5,6 +5,7 @@
 Makefile with tmux
 '''
 
+
 ###############################################################################
 
 __author__    = 'Milos Subotic'
@@ -242,7 +243,11 @@ for target_or_setting in args.targets_and_settings:
 	else:
 		targets.append(target_or_setting)
 	
+	
 ################
+print("---------------------------------------------------")
+print(targets, settings)
+print("---------------------------------------------------")
 
 cfg_fn = os.path.join(os.getcwd(), 'tmuxer.cfg.py')
 # Check if config file exists.

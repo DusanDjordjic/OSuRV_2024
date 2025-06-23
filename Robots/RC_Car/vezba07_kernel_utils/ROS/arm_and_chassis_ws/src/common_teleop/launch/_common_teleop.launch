@@ -3,24 +3,6 @@
 
 
 	<!-- Joystick Device Argument -->
-	<node
-		name="joy_remapper"
-		pkg="common_teleop"
-		type="joy_remapper.py"
-		output="screen"
-		respawn="true"
-	>
-		<remap from="joy_src" to="/raw_joy" />
-		<remap from="joy_dst" to="/joy" />
-	</node>
-	<node
-		if="false"
-		name="set_log_level__joy_remapper"
-		pkg="rosservice"
-		type="rosservice"
-		args="call /joy_remapper/set_logger_level \'{logger: rospy, level: debug}\'"
-	/>
-
 
 	<node
 		name="mode_teleop"
