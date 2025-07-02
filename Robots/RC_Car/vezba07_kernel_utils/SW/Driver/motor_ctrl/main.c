@@ -53,7 +53,7 @@ static ssize_t motor_ctrl_write(
 	uint32_t dp;
 	dir_t dir;
 	uint32_t threshold;
-	
+
 	if(copy_from_user((uint8_t*)pos_cmd + *f_pos, buf, len) != 0) {
 		return -EFAULT;
 	}else{
@@ -81,6 +81,8 @@ static ssize_t motor_ctrl_write(
 			
 			pwm__set_threshold(ch, threshold);
 		}
+	
+		printk(KERN_INFO DEV_NAME": Write called CH: %d PC: %d DP: %d  DIR: %d TRE:%d.\n", ch, pc, dp, dir, threshold);
 		
 		*f_pos += len;
 		return len;

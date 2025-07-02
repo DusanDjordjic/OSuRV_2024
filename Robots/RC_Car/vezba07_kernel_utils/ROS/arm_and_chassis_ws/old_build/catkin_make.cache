@@ -1,0 +1,2 @@
+arm_teleop:common_teleop:s3a_main:s3a_moveit_config:wc_main:wc_teleop
+-DCATKIN_DEVEL_PREFIX=/home/pi/Public/rccar/OSuRV_2024/Robots/RC_Car/vezba07_kernel_utils/ROS/arm_and_chassis_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/Public/rccar/OSuRV_2024/Robots/RC_Car/vezba07_kernel_utils/ROS/arm_and_chassis_ws/install -G Unix Makefiles

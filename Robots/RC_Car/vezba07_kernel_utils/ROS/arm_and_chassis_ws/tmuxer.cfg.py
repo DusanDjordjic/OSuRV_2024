@@ -161,7 +161,7 @@ _targets = {
 			'teleop': '''
 				# Joypad must have analog on.
 				roslaunch arm_teleop jog_teleop.launch name:=${ARM}
-				#roslaunch arm_teleop servo_teleop.launch name:=${ARM}
+				# roslaunch arm_teleop servo_teleop.launch name:=${ARM}
 				''',
 			'joint_echo': '''
 				rostopic echo /joint_states NO_ENTER
