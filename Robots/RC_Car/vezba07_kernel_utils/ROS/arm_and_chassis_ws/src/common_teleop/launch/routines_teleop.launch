@@ -1,15 +1,26 @@
 <launch>
 	<env name="ROSCONSOLE_FORMAT" value="[${severity}][${node}]: ${message}"/>
 
+	<!-- Joystick Device Arguments used when remote is false -->
+	<arg name="joy_dev" default="/dev/input/js0" />
+	<arg name="joy_dev_ff" default="/dev/input/event0" />
+	
 	<arg name="name" default="b4a" doc="Name of arm"/>
 	<arg name="en_chassis" default="false" doc="Enable chassis"/>
-
+	<arg name="remote" default="false" doc="Enable remote control"/>
 
 	<include
 		file="$(find common_teleop)/launch/_common_teleop.launch"
 		pass_all_args="true"
 	/>
-	
+
+	<!-- If remote control is true disable the joy node as it will be running on another machine -->
+	<group unless="$(arg remote)">
+		<include
+			file="$(find common_teleop)/launch/joy.launch"
+			pass_all_args="true"
+		/>
+	</group>
 	
 	<arg 
 		name="rp1_name"

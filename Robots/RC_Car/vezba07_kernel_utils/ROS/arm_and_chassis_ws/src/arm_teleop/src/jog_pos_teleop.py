@@ -38,7 +38,8 @@ class JogPosTeleop(JogTeleop):
 		
 		self.pos_cmd = fill(0.0, self.n_joints)
 		self.pos_fb = fill(0.0, self.n_joints)
-		
+		self.motors_freewheel = True
+
 		self.print_help('''
 		2	Toggle motors freewheel
 		
@@ -79,6 +80,7 @@ class JogPosTeleop(JogTeleop):
 		
 		msg = Float64MultiArray()
 		msg.data = self.pos_cmd
+		rospy.loginfo("Commands {}".format(self.pos_cmd))
 		self.pos_pub.publish(msg)
 		
 	def on_joints_fb(self, data):

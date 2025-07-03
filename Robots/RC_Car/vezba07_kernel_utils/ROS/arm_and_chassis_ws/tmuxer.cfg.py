@@ -6,9 +6,12 @@ if not 'ARM' in globals():
 if not 'REMOTE' in globals():
 	REMOTE = False
 
-print("=============================")
-print(globals())
-print("=============================")
+# Create remote string to be passed into routines_teleop.launch file
+if REMOTE == True:
+	REMOTE_STRING = "true" 
+else:
+	REMOTE_STRING= "false"
+
 import subprocess
 def run_for_stdout(str_cmd):
 	r = subprocess.run(str_cmd.split(), stdout = subprocess.PIPE)
@@ -161,7 +164,7 @@ _targets = {
 			'teleop': '''
 				# Joypad must have analog on.
 				roslaunch arm_teleop jog_teleop.launch name:=${ARM}
-				#roslaunch arm_teleop servo_teleop.launch name:=${ARM}
+				# roslaunch arm_teleop servo_teleop.launch name:=${ARM}
 				''',
 			'joint_echo': '''
 				rostopic echo /joint_states NO_ENTER
@@ -206,8 +209,8 @@ _targets = {
 		{
 			'routine': '''
 				tmux_no_wait
-				roslaunch common_teleop routines_teleop.launch name:=${ARM}
-				''',
+				roslaunch common_teleop routines_teleop.launch name:={} remote:={}
+				'''.format(ARM, REMOTE_STRING),
 			'teleop': '''
 				tmux_no_wait
 				# Joypad must have analog on.

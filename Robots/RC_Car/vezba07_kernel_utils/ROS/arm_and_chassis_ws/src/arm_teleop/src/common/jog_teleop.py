@@ -91,4 +91,10 @@ Jog Teleop:
 			print_active_motor()
 
 		# L stick D- U+
+
+		# rospy.loginfo(
+		# 		'Current Axes: {} '.format(
+		# 			data.axes[1],
+		# 		)
+		# 	)
 		self.axis = data.axes[1] # In range [-1, 1]

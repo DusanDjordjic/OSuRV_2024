@@ -47,7 +47,6 @@ Manual Teleop:
 		msg.drive.steering_angle = data.axes[0] * MAX_STEERING
 		# Cross D/U | L stick D/U
 		msg.drive.speed = data.axes[1] * MAX_SPEED
-		
 		self.cmd_pub.publish(msg)
 
 

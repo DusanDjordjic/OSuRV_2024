@@ -54,7 +54,6 @@ SimpleAckermannSteeringController::SimpleAckermannSteeringController(ros::NodeHa
 		all_motors_sim ? "true" : "false"
 	);
 	
-	
 	if(!all_motors_sim){
 		// Open driver.
 		drv_fd = open(DEV_FN, O_RDWR);
@@ -148,7 +147,7 @@ void SimpleAckermannSteeringController::publish_odom(const ros::TimerEvent& e) {
 		}
 		
 		int64_t pulse_cnt_fb = ra.pulse_cnt_fb[0];
-#if 1
+#if 0
 		if(pulse_cnt_fb != prev_pulse_cnt_fb){
 			ROS_DEBUG("pulse_cnt_fb = %lld\n", (long long)pulse_cnt_fb);
 		}
@@ -193,7 +192,7 @@ void SimpleAckermannSteeringController::cmd_cb(
 		speed = -90;
 	}
 	
-#if 0
+#if 1
 		ROS_DEBUG("speed = %f %%", speed);
 		ROS_DEBUG(
 			"steering_angle = %f rad (%f deg)",
@@ -229,6 +228,7 @@ void SimpleAckermannSteeringController::cmd_cb(
 		
 		seek();
 		
+		ROS_INFO("Writing to driver");
 		int r = write(drv_fd, (char*)&duty, sizeof(duty));
 		if(r != sizeof(duty)){
 			ROS_WARN("write went wrong!");

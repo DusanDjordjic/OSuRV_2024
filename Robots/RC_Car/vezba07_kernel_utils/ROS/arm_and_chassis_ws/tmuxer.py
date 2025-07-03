@@ -243,7 +243,8 @@ for target_or_setting in args.targets_and_settings:
 	else:
 		targets.append(target_or_setting)
 	
-	
+
+
 ################
 print("---------------------------------------------------")
 print(targets, settings)
@@ -279,7 +280,6 @@ settings_code = ''
 for key, value in settings:
 	v = convert_to_something(value)
 	settings_code += f'{key} = {v}\n'
-	
 
 class Cfg:
 	def __init__(self):
