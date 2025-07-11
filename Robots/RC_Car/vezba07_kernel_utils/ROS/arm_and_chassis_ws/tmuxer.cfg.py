@@ -217,7 +217,42 @@ _targets = {
 				roslaunch wc_teleop manual_teleop.launch
 				''',
 		},
-	]
+	],
+	'run_remote': [
+		{
+    		'main': '''
+				cd ~/fax/OSURV/projekat1/OSuRV_2024-working/Robots/RC_Car/vezba07_kernel_utils/Remote_Joy
+				source devel/setup.sh
+				roscore
+				''',
+
+    'routine': '''
+        cd ~/fax/OSURV/projekat1/OSuRV_2024-working/Robots/RC_Car/vezba07_kernel_utils/Remote_Joy
+        source devel/setup.sh
+        echo "[INFO] Workspace sourced."
+		sleep 8
+		rostopic echo /joy
+        ''',
+
+    'teleop': '''
+		sleep 5
+        # Detect joystick
+        JS=$(ls -la /dev/input/by-id | grep -- '-joystick' | grep -o 'js[0-9]' | head -1 | sed 's/js//')
+        EVENT=$(ls -la /dev/input/by-id | grep -- '-event-joystick' | grep -o 'event[0-9]' | head -1 | sed 's/event//')
+
+        if [ -z "$JS" ] || [ -z "$EVENT" ]; then
+            echo "[ERROR] Could not find joystick or event device."
+            tmux_exit
+        fi
+
+        echo "[INFO] js: $JS, event: $EVENT"
+
+        cd ~/fax/OSURV/projekat1/OSuRV_2024-working/Robots/RC_Car/vezba07_kernel_utils/Remote_Joy
+        source devel/setup.sh
+        roslaunch joy_reader joy.launch joy_dev:=/dev/input/js${JS} joy_dev_ff:=/dev/input/event${EVENT}
+        '''
+	
+}]
 
 }
 
@@ -236,6 +271,7 @@ _dependencies = {
 	'__run_drv_wc': ['setup', '__common_run_drv'],
 	'run': ['run_drv', '__common_run'],
 	'run_wc': ['__run_drv_wc', '__common_run'],
+	'run_remote':[],
 }
 
 

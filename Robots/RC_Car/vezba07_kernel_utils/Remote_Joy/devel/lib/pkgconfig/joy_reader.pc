@@ -1,0 +1,8 @@
+prefix=/home/todor/fax/OSURV/projekat1/OSuRV_2024-working/Robots/RC_Car/vezba07_kernel_utils/Remote_Joy/devel
+
+Name: joy_reader
+Description: Description of joy_reader
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
